@@ -35,4 +35,4 @@ main (100,100,100)
 
 simulates a 100x100 World matrix with 100 a generations' simulation.
 
-![Game of Life](/img/Gol.mp4 "GOL")
+![Game of Life](/img/gol.gif "GOL")
