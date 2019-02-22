@@ -6,7 +6,7 @@ In other words, the rule set is B3/S23 (for “birth” with 3 neighbors and “
 
 In addition, if you want your cellular automaton to actually care which of its neighbors are alive (as opposed to just counting them), you can get [even more interesting structures](http://mathworld.wolfram.com/Rule30.html) with even more [crazy rules](http://www.stephenwolfram.com/publications/academic/cellular-automaton-properties.pdf).
 
-These decisions are made step-wise, all at once in something that in this Julia implementation I called a *generation*. Interestingly, while the rules of this “game” are extremely simple, there is a lot of very complex behavior.
+These decisions are made step-wise, all at once in something that in this [Julia](https://julialang.org/) implementation I called a *generation*. Interestingly, while the rules of this “game” are extremely simple, there is a lot of very complex behavior.
 
 ## Convolutions
 
@@ -17,5 +17,20 @@ In the computation of the next generation from the actual one, all I do is convo
 ![Kernel for Game of Life](/img/kernel.png "Kernel")
 
 It's easy to prove mathematically that the convolution with such a kernel gives
-for each of the cell the number of its neighbors. This way is very easy to apply
+for each cell the number of its neighbors. This way is very easy to apply
 a given rule set and determine the next generation state.
+
+## Image and video creations
+
+For a better visualization of the process, for each generation the program produces a screenshot in PNG format and stores it in the *Worldpics* folder.
+
+A Video module is also provided to generate an animation putting together all the
+PNGs generated. This video modules requires the **ffmpeg** library to be installed on the system since the Julia package Images requires it as a dependency.
+
+## Usage
+
+To launch the program it's sufficient to call the main module specifying the dimensions of the World matrix and the number of desired generations, ie:
+
+main (100,100,1000)
+
+simulates a 100x100 World matrix with 1000 a generations' simulation.
