@@ -31,6 +31,8 @@ PNGs generated. This video modules requires the **ffmpeg** library to be install
 
 To launch the program it's sufficient to call the main module specifying the dimensions of the World matrix and the number of desired generations, ie:
 
-main (100,100,1000)
+main (100,100,100)
 
-simulates a 100x100 World matrix with 1000 a generations' simulation.
+simulates a 100x100 World matrix with 100 a generations' simulation.
+
+![Game of Life](/img/Gol.mp4 "GOL")
